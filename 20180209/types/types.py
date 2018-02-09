@@ -2,7 +2,7 @@ from pwn import *
 
 TYPE_INT        = 1
 TYPE_FLOAT      = 2
-TYPE_STR     = 3
+TYPE_STR        = 3
 
 TYPE_INIT       = 1
 TYPE_DEL        = 2
